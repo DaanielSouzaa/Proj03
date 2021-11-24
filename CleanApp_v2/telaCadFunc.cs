@@ -17,7 +17,6 @@ namespace CleanApp_v2
 
         public void populaList()
         {
-            listFunc.Items.Clear();
             foreach(Pessoa p in Program.pessoas)
             {
                 listFunc.Items.Add(p.Nome);
@@ -49,5 +48,6 @@ namespace CleanApp_v2
         {
             this.Hide();
         }
+
     }
 }

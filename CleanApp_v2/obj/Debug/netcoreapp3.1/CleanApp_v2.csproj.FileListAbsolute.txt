@@ -28,3 +28,4 @@ C:\Users\daniel.avelino\source\repos\CleanApp_v2\CleanApp_v2\obj\Debug\netcoreap
 C:\Users\daniel.avelino\source\repos\CleanApp_v2\CleanApp_v2\obj\Debug\netcoreapp3.1\CleanApp_v2.telaAddEtapa.resources
 C:\Users\daniel.avelino\source\repos\CleanApp_v2\CleanApp_v2\obj\Debug\netcoreapp3.1\CleanApp_v2.telaCadFunc.resources
 C:\Users\daniel.avelino\source\repos\CleanApp_v2\CleanApp_v2\obj\Debug\netcoreapp3.1\CleanApp_v2.telaMenuEmpresa.resources
+C:\Users\daniel.avelino\source\repos\CleanApp_v2\CleanApp_v2\obj\Debug\netcoreapp3.1\CleanApp_v2.listaEmpresas.resources

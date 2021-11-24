@@ -32,7 +32,7 @@ namespace CleanApp_v2
                         {
                             if(Caixa.Text != "")
                             {
-                                if (rdLucroPresumido.Checked)
+                                if (rdLucroPresumido.Checked && Program.servicos.Count > 0 && Program.pessoas.Count > 0)
                                 {
                                     EmpresaLucroPresumido emp = new EmpresaLucroPresumido(rzTxtBox.Text, int.Parse(cnpj.Text), double.Parse(dlPercentual.Text) / 100, double.Parse(Caixa.Text));
                                     for(int i = 0;i < Program.servicos.Count; i++)
@@ -46,7 +46,9 @@ namespace CleanApp_v2
                                     Program.pessoas.Clear();
                                     Program.servicos.Clear();
                                     Program.empresas.Add(emp);
-                                } else
+                                    MessageBox.Show("Cadastrado com sucesso!");
+                                    this.Hide();
+                                } else if(rdLucroReal.Checked && Program.servicos.Count > 0 && Program.pessoas.Count > 0)
                                 {
                                     EmpresaLucroReal emp = new EmpresaLucroReal(rzTxtBox.Text, int.Parse(cnpj.Text), double.Parse(dlPercentual.Text) / 100, double.Parse(Caixa.Text));
                                     for (int i = 0; i < Program.servicos.Count; i++)
@@ -60,12 +62,16 @@ namespace CleanApp_v2
                                     Program.pessoas.Clear();
                                     Program.servicos.Clear();
                                     Program.empresas.Add(emp);
+                                    MessageBox.Show("Cadastrado com sucesso!");
+                                    this.Hide();
                                 }
-                                MessageBox.Show("Cadastrado com sucesso!");
-                                this.Hide();
+                                else
+                                {
+                                    MessageBox.Show("Confira os funcionários e serviços!");
+                                }
                             } else
                             {
-                                if (rdLucroPresumido.Checked)
+                                if (rdLucroPresumido.Checked && Program.servicos.Count > 0 && Program.pessoas.Count > 0)
                                 {
                                     EmpresaLucroPresumido emp = new EmpresaLucroPresumido(rzTxtBox.Text, int.Parse(cnpj.Text), double.Parse(dlPercentual.Text) / 100);
                                     for (int i = 0; i < Program.servicos.Count; i++)
@@ -79,8 +85,10 @@ namespace CleanApp_v2
                                     Program.pessoas.Clear();
                                     Program.servicos.Clear();
                                     Program.empresas.Add(emp);
+                                    MessageBox.Show("Cadastrado com sucesso!");
+                                    this.Hide();
                                 }
-                                else
+                                else if(rdLucroReal.Checked && Program.servicos.Count > 0 && Program.pessoas.Count > 0)
                                 {
                                     EmpresaLucroReal emp = new EmpresaLucroReal(rzTxtBox.Text, int.Parse(cnpj.Text), double.Parse(dlPercentual.Text) / 100);
                                     for (int i = 0; i < Program.servicos.Count; i++)
@@ -94,9 +102,13 @@ namespace CleanApp_v2
                                     Program.pessoas.Clear();
                                     Program.servicos.Clear();
                                     Program.empresas.Add(emp);
+                                    MessageBox.Show("Cadastrado com sucesso!");
+                                    this.Hide();
+                                } else
+                                {
+                                    MessageBox.Show("Confira os funcionários e serviços!");
                                 }
-                                MessageBox.Show("Cadastrado com sucesso!");
-                                this.Hide();
+                                
                             }
                         } else
                         {
@@ -114,7 +126,7 @@ namespace CleanApp_v2
             }
             else
             {
-                MessageBox.Show("Favor Preencher o campo Razão social!");
+                MessageBox.Show("Favor Preencher o campo Razão social e marcar um dos tipos!");
             }
         }
         private void Form_closeForm(object sender, FormClosedEventArgs e)
@@ -126,11 +138,30 @@ namespace CleanApp_v2
         private void cadServico_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Program.cadServicos();
+
+            atualizaBoxServicos();
         }
 
         private void cadFunc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Program.cadPessoas();
+            atualizaBoxFuncionarios();
+        }
+
+        private void atualizaBoxServicos()
+        {
+            foreach (Servico s in Program.servicos)
+            {
+                BoxlistServicos.Items.Add(s.NomeLimpeza);
+            }
+        }
+
+        private void atualizaBoxFuncionarios()
+        {
+            foreach(Pessoa p in Program.pessoas)
+            {
+                BoxlistFunc.Items.Add(p.Nome);
+            }
         }
     }
 

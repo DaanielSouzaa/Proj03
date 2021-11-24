@@ -43,6 +43,10 @@ namespace CleanApp_v2
             this.rdLucroPresumido = new System.Windows.Forms.RadioButton();
             this.cadServico = new System.Windows.Forms.LinkLabel();
             this.cadFunc = new System.Windows.Forms.LinkLabel();
+            this.BoxlistServicos = new System.Windows.Forms.ListBox();
+            this.BoxlistFunc = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cadEmpresa
@@ -190,13 +194,55 @@ namespace CleanApp_v2
             this.cadFunc.Text = "Cadastrar funcionários";
             this.cadFunc.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.cadFunc_LinkClicked);
             // 
+            // BoxlistServicos
+            // 
+            this.BoxlistServicos.FormattingEnabled = true;
+            this.BoxlistServicos.ItemHeight = 15;
+            this.BoxlistServicos.Location = new System.Drawing.Point(34, 459);
+            this.BoxlistServicos.Name = "BoxlistServicos";
+            this.BoxlistServicos.Size = new System.Drawing.Size(324, 124);
+            this.BoxlistServicos.TabIndex = 27;
+            // 
+            // BoxlistFunc
+            // 
+            this.BoxlistFunc.FormattingEnabled = true;
+            this.BoxlistFunc.ItemHeight = 15;
+            this.BoxlistFunc.Location = new System.Drawing.Point(398, 459);
+            this.BoxlistFunc.Name = "BoxlistFunc";
+            this.BoxlistFunc.Size = new System.Drawing.Size(335, 124);
+            this.BoxlistFunc.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(87, 428);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(214, 28);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Serviços já cadastrados";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(436, 428);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(253, 28);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Funcionários já cadastrados";
+            // 
             // formCadEmpresa
             // 
             this.AcceptButton = this.cadEmpresa;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(811, 386);
+            this.ClientSize = new System.Drawing.Size(818, 676);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BoxlistFunc);
+            this.Controls.Add(this.BoxlistServicos);
             this.Controls.Add(this.cadFunc);
             this.Controls.Add(this.cadServico);
             this.Controls.Add(this.rdLucroPresumido);
@@ -235,5 +281,9 @@ namespace CleanApp_v2
         private System.Windows.Forms.RadioButton rdLucroPresumido;
         private System.Windows.Forms.LinkLabel cadServico;
         private System.Windows.Forms.LinkLabel cadFunc;
+        private System.Windows.Forms.ListBox BoxlistServicos;
+        private System.Windows.Forms.ListBox BoxlistFunc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

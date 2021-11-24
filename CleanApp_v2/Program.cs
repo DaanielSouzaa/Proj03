@@ -41,7 +41,14 @@ namespace CleanApp_v2
 
                 if (tipo == "Cliente")
                 {
-
+                    if(empresas.Count > 0)
+                    {
+                        listaEmpresas();
+                    } else
+                    {
+                        MessageBox.Show("Não existem empresas cadastradas no sistema!");
+                        tipo = "";
+                    }
                 } else
                 {
 
@@ -74,6 +81,11 @@ namespace CleanApp_v2
             tc.ShowDialog();
         }
 
+        public static void listaEmpresas()
+        {
+            listaEmpresas le = new listaEmpresas();
+            le.ShowDialog();
+        }
         public static void telaEmpresa(string empresa)
         {
             telaMenuEmpresa tm = new telaMenuEmpresa(empresa);

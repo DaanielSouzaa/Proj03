@@ -24,7 +24,6 @@ namespace CleanApp_v2
 
         private void populaCheck()
         {
-            checkEtapas.Items.Clear();
             if (Program.etapas.Count < 0)
             {
                 checkEtapas.Hide();
