@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="telaAddEtapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="telaCadFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="telaMenuEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="telaNome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="telaNome.Designer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="telaTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="telaEscolherEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="telaCadEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="telaServicosNaoUsado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="telaIncuirEtapas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
