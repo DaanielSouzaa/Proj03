@@ -97,8 +97,20 @@ namespace CleanApp_v2
 
         }
 
+        public static void Form_closeForm(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+            MessageBox.Show("Fechado com sucesso!");
+        }
+
         public static void generateDados()
         {
+            empresas.Clear();
+            etapas.Clear();
+            servicos.Clear();
+            valorEtapas.Clear();
+            pessoas.Clear();
+
             EmpresaLucroPresumido elp = new EmpresaLucroPresumido("EmpLP1",123,50,5000);
             EmpresaLucroPresumido elp2 = new EmpresaLucroPresumido("EmpLP2", 12, 52,1000);
             EmpresaLucroPresumido elp3 = new EmpresaLucroPresumido("EmpLP3", 10, 57,100000);

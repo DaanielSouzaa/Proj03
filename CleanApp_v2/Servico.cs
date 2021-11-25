@@ -60,8 +60,6 @@ namespace CleanApp_v2
 
         public void calcularPrecoTotal()
         {
-            this.valorTotal = 0;
-
             for (int i = 0; i < valorEtapas.Count; i++)
             {
                 this.valorTotal += valorEtapas[i];

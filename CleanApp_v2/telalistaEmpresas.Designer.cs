@@ -125,6 +125,7 @@ namespace CleanApp_v2
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "telalistaEmpresas";
             this.Text = "listaEmpresas";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_closeForm);
             this.ResumeLayout(false);
             this.PerformLayout();
 

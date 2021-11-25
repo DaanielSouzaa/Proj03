@@ -146,6 +146,7 @@ namespace CleanApp_v2
             this.Controls.Add(this.nomeFunc);
             this.Name = "telaCadFunc";
             this.Text = "CleaApp";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_closeForm);
             ((System.ComponentModel.ISupportInitialize)(this.idadeFunc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

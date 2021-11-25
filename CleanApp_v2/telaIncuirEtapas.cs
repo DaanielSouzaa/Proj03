@@ -45,11 +45,11 @@ namespace CleanApp_v2
                 for(int i = 0; i < Program.etapas.Count; i++)
                 {
                     srv.cadLimpeza(Program.etapas[i],Program.valorEtapas[i]);
-                    Program.etapas.Clear();
-                    Program.valorEtapas.Clear();
                 }
-                    srv.calcularPrecoTotal();
-                    Program.servicos.Add(srv);
+                srv.calcularPrecoTotal();
+                Program.etapas.Clear();
+                Program.valorEtapas.Clear();
+                Program.servicos.Add(srv);
                 this.Hide();
                 //Program.showServicos();
             } else
@@ -62,6 +62,12 @@ namespace CleanApp_v2
         {
             telaAddEtapa ae = new telaAddEtapa();
             ae.ShowDialog();
+        }
+
+        private void Form_closeForm(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+            MessageBox.Show("Fechado com sucesso!");
         }
     }
 }

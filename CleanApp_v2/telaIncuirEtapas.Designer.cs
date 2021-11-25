@@ -129,6 +129,7 @@ namespace CleanApp_v2
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "addServico";
             this.Text = "CleanApp";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_closeForm);
             ((System.ComponentModel.ISupportInitialize)(this.tempoServico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

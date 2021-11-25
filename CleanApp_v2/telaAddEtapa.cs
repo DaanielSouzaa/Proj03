@@ -31,5 +31,11 @@ namespace CleanApp_v2
                 MessageBox.Show("Erro ao incluir serviço, favor verificar os campos\n*Valor etapa deve ser somente de números!");
             }
         }
+
+        public static void Form_closeForm(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+            MessageBox.Show("Fechado com sucesso!");
+        }
     }
 }

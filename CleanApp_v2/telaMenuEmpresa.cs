@@ -69,5 +69,11 @@ namespace CleanApp_v2
                 }
             }
         }
+
+        private void Form_closeForm(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+            MessageBox.Show("Fechado com sucesso!");
+        }
     }
 }

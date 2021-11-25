@@ -67,9 +67,9 @@ namespace CleanApp_v2
             this.listaServicos.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listaServicos.FormattingEnabled = true;
             this.listaServicos.ItemHeight = 28;
-            this.listaServicos.Location = new System.Drawing.Point(12, 100);
+            this.listaServicos.Location = new System.Drawing.Point(53, 80);
             this.listaServicos.Name = "listaServicos";
-            this.listaServicos.Size = new System.Drawing.Size(362, 116);
+            this.listaServicos.Size = new System.Drawing.Size(759, 116);
             this.listaServicos.TabIndex = 2;
             // 
             // listaFuncionarios
@@ -77,9 +77,9 @@ namespace CleanApp_v2
             this.listaFuncionarios.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listaFuncionarios.FormattingEnabled = true;
             this.listaFuncionarios.ItemHeight = 28;
-            this.listaFuncionarios.Location = new System.Drawing.Point(390, 100);
+            this.listaFuncionarios.Location = new System.Drawing.Point(53, 202);
             this.listaFuncionarios.Name = "listaFuncionarios";
-            this.listaFuncionarios.Size = new System.Drawing.Size(362, 116);
+            this.listaFuncionarios.Size = new System.Drawing.Size(759, 116);
             this.listaFuncionarios.TabIndex = 3;
             // 
             // cnpjLabel
@@ -125,7 +125,7 @@ namespace CleanApp_v2
             // Voltar
             // 
             this.Voltar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Voltar.Location = new System.Drawing.Point(328, 248);
+            this.Voltar.Location = new System.Drawing.Point(401, 339);
             this.Voltar.Name = "Voltar";
             this.Voltar.Size = new System.Drawing.Size(119, 39);
             this.Voltar.TabIndex = 8;
@@ -137,7 +137,7 @@ namespace CleanApp_v2
             // 
             this.distribuirLucros.AutoSize = true;
             this.distribuirLucros.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.distribuirLucros.Location = new System.Drawing.Point(14, 232);
+            this.distribuirLucros.Location = new System.Drawing.Point(12, 353);
             this.distribuirLucros.Name = "distribuirLucros";
             this.distribuirLucros.Size = new System.Drawing.Size(154, 28);
             this.distribuirLucros.TabIndex = 9;
@@ -150,7 +150,7 @@ namespace CleanApp_v2
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(796, 311);
+            this.ClientSize = new System.Drawing.Size(911, 390);
             this.Controls.Add(this.distribuirLucros);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.dlValor);
@@ -164,6 +164,7 @@ namespace CleanApp_v2
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "telaMenuEmpresa";
             this.Text = "CleanApp";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_closeForm);
             this.Load += new System.EventHandler(this.telaMenuEmpresa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

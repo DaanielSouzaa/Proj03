@@ -83,7 +83,7 @@ namespace CleanApp_v2
             this.btnCad.UseVisualStyleBackColor = true;
             this.btnCad.Click += new System.EventHandler(this.btnCad_Click);
             // 
-            // telaCadastroServico
+            // telaAddEtapa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -94,7 +94,7 @@ namespace CleanApp_v2
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nomeEtapa);
-            this.Name = "telaCadastroServico";
+            this.Name = "telaAddEtapa";
             this.Text = "CleanApp";
             this.ResumeLayout(false);
             this.PerformLayout();
