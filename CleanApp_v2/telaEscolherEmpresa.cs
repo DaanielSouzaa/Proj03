@@ -16,7 +16,7 @@ namespace CleanApp_v2
         }
 
         private void Form3_Load(object sender, EventArgs e)
-        {
+        {//CARREGAMENTO DO FORM
             PopulaComboBox();
             this.Top = 0;
             this.Left = 0;
@@ -25,7 +25,7 @@ namespace CleanApp_v2
         }       
 
         private void PopulaComboBox()
-        {
+        {//POPULA O COMBOBOX COM AS EMPRESAS
             this.selectEmpresas.Items.Clear();
             this.selectEmpresas.Items.Add("Incluir");
             if(Program.empresas.Count > 0)
@@ -38,7 +38,7 @@ namespace CleanApp_v2
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {//ESCOLHE A EMPRESA OU CHAMA A TELA DE INCLUSAO
             if(selectEmpresas.Text == "Incluir")
             {
                 this.Hide();
@@ -50,12 +50,12 @@ namespace CleanApp_v2
             }
         }
         private void Form_closeForm(object sender, FormClosedEventArgs e)
-        {
+        {//FECHA O PROGRAMA
             Environment.Exit(0);
             MessageBox.Show("Fechado com sucesso!");
         }
         private void showTelaEmpresa(string empresa)
-        {
+        {//EXIBE A EMPRESA ESCOLHIDA
             Program.telaEmpresa(empresa);
         }
     }

@@ -13,28 +13,28 @@ namespace CleanApp_v2
         /// </summary>
         /// 
         //[STAThread]
-        public static List<Empresa> empresas = new List<Empresa>();
+        public static List<Empresa> empresas = new List<Empresa>();//ESTRUTURAS UTILIZADAS NO PROGRAMA
         public static List<Servico> servicos = new List<Servico>();
         public static List<string> etapas = new List<string>();
         public static List<double> valorEtapas = new List<double>();
-        public static List<Pessoa> pessoas = new List<Pessoa>();
+        public static List<Pessoa> pessoas = new List<Pessoa>();//ESTRUTURAS UTILIZADAS NO PROGRAMA
 
         public static string nome;
-        public static bool sessao = true;
+        public static bool sessao = true;//ESTRUTURAS UTILIZADAS NO PROGRAMA
 
-        static void Main()
+        static void Main()//FUNCAO PRINCIPAL
         {
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new nome());
-            nome formName = new nome();
+            nome formName = new nome();//INSTANCIAS DAS TELAS
             formName.ShowDialog(); 
             Tipo formTipo = new Tipo();
-            visaoEmpresa ve = new visaoEmpresa();
-            
-            nome = formName.name;
-            while (sessao)
+            visaoEmpresa ve = new visaoEmpresa();//INSTANCIAS DAS TELAS
+
+            nome = formName.name;//FORM NOME
+            while (sessao)//MANTER PROGRAMA EXECUTANDO
             {
                 formTipo.ShowDialog();
                 string tipo = formTipo.tipo;
@@ -63,47 +63,47 @@ namespace CleanApp_v2
             
         }
 
-        public static void cadServicos()
+        public static void cadServicos()//TELA DE CADASTRO DE SERVICO
         {
             addServico cs = new addServico();
             cs.ShowDialog();
         }
 
-        public static void cadEmpresa()
+        public static void cadEmpresa()//TELA DE CADASTRO DE EMPRESA
         {
             formCadEmpresa ce = new formCadEmpresa();
             ce.ShowDialog();
         }
 
-        public static void cadPessoas()
+        public static void cadPessoas()//TELA DE CADASTRO DE PESSOAS
         {
             telaCadFunc tc = new telaCadFunc();
             tc.ShowDialog();
         }
 
-        public static void listaEmpresas()
+        public static void listaEmpresas()//TELA DE LISTAGEM DAS EMPRESAS
         {
             telalistaEmpresas le = new telalistaEmpresas();
             le.ShowDialog();
         }
-        public static void telaEmpresa(string empresa)
+        public static void telaEmpresa(string empresa)//TELA DE VISAO DA EMPRESA
         {
             telaMenuEmpresa tm = new telaMenuEmpresa(empresa);
             tm.ShowDialog();
         }
 
-        public static void showServicos(Empresa p)
+        public static void showServicos(Empresa p)//ALTERADO
         {
 
         }
 
-        public static void Form_closeForm(object sender, FormClosedEventArgs e)
+        public static void Form_closeForm(object sender, FormClosedEventArgs e)//FECHA PROGRAMA
         {
             Environment.Exit(0);
             MessageBox.Show("Fechado com sucesso!");
         }
 
-        public static void generateDados()
+        public static void generateDados()//GERA DADOS RANDOMICOS
         {
             empresas.Clear();
             etapas.Clear();

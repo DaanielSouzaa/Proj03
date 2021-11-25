@@ -6,7 +6,7 @@ namespace CleanApp_v2
 {
     class EmpresaLucroPresumido : Empresa
     {
-
+        //APLICACAO DA HERANCA
         public EmpresaLucroPresumido(string razao, int cnpj, double repasseFunc) : base(razao, cnpj, repasseFunc)
         {
         }
@@ -14,8 +14,9 @@ namespace CleanApp_v2
         public EmpresaLucroPresumido(string razao, int cnpj, double repasseFunc, double caixa) : base(razao, cnpj, repasseFunc, caixa)
         {
         }
+        //CONTRUTORES
 
-        public override void DistribuirLucros()
+        public override void DistribuirLucros()//FUNCAO DISTRIBUICAO DE LUCRO DA INTERFACE
         {
             if (caixa > 0)
             {
@@ -38,7 +39,7 @@ namespace CleanApp_v2
 
         }
 
-        public override void ExecutarLimpeza()
+        public override void ExecutarLimpeza()//FUNCAO DA INTERFACE LIMPEZA
         {
             if (servicos.Count > 0)
             {

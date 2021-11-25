@@ -14,10 +14,10 @@ namespace CleanApp_v2
         {
             InitializeComponent();
             atualizaComboBox();
-        }
+        }//TELA DEPRECIADA
 
         private void selectServicos_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {//TELA DEPRECIADA
             if(selectServicos.Text == "Incluir")
             {
                 this.Hide();
@@ -26,16 +26,16 @@ namespace CleanApp_v2
             {
                 this.Hide();
             }
-        }
+        }//TELA DEPRECIADA
 
         private void atualizaComboBox()
-        {
+        {//TELA DEPRECIADA
             selectServicos.Items.Clear();
             selectServicos.Items.Add("Incluir");
             for (int i = 0; i < Program.empresas.Count; i++)
             {
 
             };
-        }
+        }//TELA DEPRECIADA
     }
 }

@@ -11,17 +11,19 @@ namespace CleanApp_v2
         protected double caixa;
         protected double repasseFunc;
 
-        protected List<Pessoa> funcionarios = new List<Pessoa>();
-        protected List<Servico> servicos = new List<Servico>();
-        protected List<double> avaliacoes = new List<double>();
+        //CLASSE BASE DE EMPRESA
 
-        public string RazaoSocial { get => razaoSocial; }
+        protected List<Pessoa> funcionarios = new List<Pessoa>();//ARRAY DOS FUNCIONARIOS
+        protected List<Servico> servicos = new List<Servico>();//ARRAY DE SERVICOS
+        protected List<double> avaliacoes = new List<double>();//AVALIACOES DOS SERVICOS
+
+        public string RazaoSocial { get => razaoSocial; }//GETTERS
         public int Cnpj { get => cnpj; }
         public double Caixa { get => caixa; }
         public double Repasse { get => repasseFunc; }
 
         public List<Servico> listServ { get => servicos; }
-        public List<Pessoa> listFunc { get => funcionarios; }
+        public List<Pessoa> listFunc { get => funcionarios; }//GETTERS
 
         public Empresa(string razao, int cnpj, double repasseFunc, double caixa)
         {
@@ -29,22 +31,22 @@ namespace CleanApp_v2
             this.cnpj = cnpj;
             this.caixa = caixa;
             this.repasseFunc = repasseFunc/100;
-        }
+        }//EMPRESA CONSTRUTOR1
 
         public void pagar(double valor)
         {
             this.caixa += valor;
-        }
+        }//PAGAR SERVICOS
 
         public Empresa(string razao, int cnpj, double repasseFunc)
         {
             this.razaoSocial = razao;
             this.cnpj = cnpj;
             this.repasseFunc = repasseFunc/100;
-        }
+        }//CONSTRUTOR 2
 
         public double getAvaliacao()
-        {
+        {//PROCESSO DE AVALIACAO
             double tot = 0;
 
             for (int i = 0; i < avaliacoes.Count; i++)
@@ -58,10 +60,10 @@ namespace CleanApp_v2
         public void addFunc(Pessoa p)
         {
             this.funcionarios.Add(p);
-        }
+        }//INCLUIR FUNCIONARIO
 
         protected void addFunc()
-        {
+        {//INCLUIR FUNCIONARIO
 
             try
             {
@@ -83,9 +85,9 @@ namespace CleanApp_v2
         public void addServico(Servico srv)
         {
             this.servicos.Add(srv);
-        }
+        }//ADD SERVICO
         protected void addServico()
-        {
+        {//ADD SERVICO VIA CONSOLE
             try
             {
                 Console.WriteLine("Digite o nome do serviço que será executado: ");
@@ -103,7 +105,7 @@ namespace CleanApp_v2
         }
 
         public virtual void avaliarEmpresa()
-        {
+        {//AVALIAR EMPRESA
             double nota = 0;
 
             while (nota < 1 && nota > 5)
@@ -120,7 +122,7 @@ namespace CleanApp_v2
             }
         }
 
-        public abstract void ExecutarLimpeza();
-        public abstract void DistribuirLucros();
+        public abstract void ExecutarLimpeza();//METODOS DA INTERFACE
+        public abstract void DistribuirLucros();//METODOS DA INTERFACE
     }
 }

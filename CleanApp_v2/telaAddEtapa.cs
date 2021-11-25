@@ -13,10 +13,10 @@ namespace CleanApp_v2
         public telaAddEtapa()
         {
             InitializeComponent();
-        }
+        }//LOAD DA TELA DE INCLUSAO DE ETAPAS
 
         private void btnCad_Click(object sender, EventArgs e)
-        {
+        {//CLIQUE DO BOTAO CADASTRAR
             try
             {
                 if (nomeEtapa.Text != "" && double.Parse(valorEtapa.Text) > 0)
@@ -36,6 +36,6 @@ namespace CleanApp_v2
         {
             Environment.Exit(0);
             MessageBox.Show("Fechado com sucesso!");
-        }
+        }//EVENTO DE FECHAMENTO DO SISTEMA
     }
 }

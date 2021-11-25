@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace CleanApp_v2
-{
+{//TELA DE ESCOLHA DO TIPO DO USUARIO
     public partial class Tipo : Form
     {
         public string tipo;
@@ -22,7 +22,7 @@ namespace CleanApp_v2
             btnTeste.Text = "Dados para teste";
             btnTeste.Width = 200;
             btnTeste.Height = 38;
-        }
+        }//EMPRESA OU CLIENTE
 
         private void button1_Click(object sender, EventArgs e)
         {

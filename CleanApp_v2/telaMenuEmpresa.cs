@@ -16,7 +16,7 @@ namespace CleanApp_v2
             InitializeComponent();
             this.empresa = empresa;
             openTela();
-        }
+        }//EXIBE OPCOES PARA A EMPRESA
 
         private void telaMenuEmpresa_Load(object sender, EventArgs e)
         {
@@ -24,7 +24,7 @@ namespace CleanApp_v2
         }
 
         private void openTela()
-        {
+        {//PREENCHE OS DADOS DA EMPRESA ESCOLHIDA
             foreach (Empresa p in Program.empresas)
             {
                 if (empresa == p.RazaoSocial)
@@ -50,12 +50,12 @@ namespace CleanApp_v2
         }
 
         private void Voltar_Click(object sender, EventArgs e)
-        {
+        {//OCULTA A EXIBICAO DESSA JANELA
             this.Hide();
         }
 
         private void distribuirLucros_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        {//DISTRIBUICAO DE LUCROS PARA OS FUNCIONARIOS
             foreach (Empresa p in Program.empresas)
             {
                 if (empresa == p.RazaoSocial)
@@ -71,7 +71,7 @@ namespace CleanApp_v2
         }
 
         private void Form_closeForm(object sender, FormClosedEventArgs e)
-        {
+        {//FECHA O PROGRAMA
             Environment.Exit(0);
             MessageBox.Show("Fechado com sucesso!");
         }

@@ -13,8 +13,8 @@ namespace CleanApp_v2
         public EmpresaLucroReal(string razao, int cnpj, double repasseFunc, double caixa) : base(razao, cnpj, repasseFunc, caixa)
         {
         }
-
-        public override void avaliarEmpresa()
+        //CONSTRUTORES
+        public override void avaliarEmpresa()//VIRTUAL
         {
             base.avaliarEmpresa();
             double nota = 0;
@@ -34,7 +34,7 @@ namespace CleanApp_v2
             }
         }
 
-        public override void DistribuirLucros()
+        public override void DistribuirLucros()//INTERFACE
         {
             if (caixa > 0)
             {
@@ -60,7 +60,7 @@ namespace CleanApp_v2
 
         }
 
-        public override void ExecutarLimpeza()
+        public override void ExecutarLimpeza()//INTERFACE
         {
             if (servicos.Count > 0)
             {

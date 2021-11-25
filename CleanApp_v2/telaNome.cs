@@ -22,7 +22,7 @@ namespace CleanApp_v2
             this.Width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
             this.Height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
         }
-
+        //TELA PARA PREENCHIMENTO DO NOME
         private void button1_Click(object sender, EventArgs e)
         {
             name = textBox1.Text;

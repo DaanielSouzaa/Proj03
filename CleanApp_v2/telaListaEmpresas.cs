@@ -25,10 +25,10 @@ namespace CleanApp_v2
                 boxEmpresas.Items.Add(p.RazaoSocial);
             }
             
-        }
+        }//POPULA O COMBOBOX COM AS EMPRESAS
 
         private void selectEmpresa_Click(object sender, EventArgs e)
-        {
+        {//REALIZA O PAGAMENTO
             foreach(Empresa p in Program.empresas)
             {
                 if(p.RazaoSocial == emp.RazaoSocial)
@@ -41,7 +41,7 @@ namespace CleanApp_v2
         }
 
         private void boxEmpresas_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {//VERIFICA A EMPRESA ESCOLHIDA E POPULA OS DADOS
             showValue.Text = "";
             boxServicos.Items.Clear();
             boxServicos.Text = "";
@@ -57,7 +57,7 @@ namespace CleanApp_v2
         }
 
         private void populaServicos(Empresa emp)
-        {
+        {//POPULA O LIST DE SERVICOS
             boxServicos.Items.Clear();
             foreach(Servico s in emp.listServ)
             {
@@ -66,7 +66,7 @@ namespace CleanApp_v2
         }
 
         private void boxServicos_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {//PREENCHE O VALOR DO SERVICO ESCOLHIDO
             foreach (Servico s in emp.listServ)
             {
                 if (s.NomeLimpeza == boxServicos.Text)
@@ -80,12 +80,12 @@ namespace CleanApp_v2
         private void returnForm_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
+        }//FECHA A JANELA ATUAL
 
         private void Form_closeForm(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
             MessageBox.Show("Fechado com sucesso!");
-        }
+        }//FECHA A EXECUCAO DO PROGRAMA
     }
 }

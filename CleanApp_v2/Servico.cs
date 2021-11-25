@@ -5,31 +5,31 @@ using System.Text;
 namespace CleanApp_v2
 {
     class Servico
-    {
+    {//CLASSE DE SERVICOS
         private double horasExecucao;
         private string nomeLimpeza;
         private double valorTotal;
 
-        public List<string> etapas = new List<string>();
+        public List<string> etapas = new List<string>();//LISTAS UTILIZADAS PARA GUARDAR ETAPAS E VALORES DOS SERVICOS
         private List<double> valorEtapas = new List<double>();
 
-        public double HorasExecucao { get => horasExecucao; }
+        public double HorasExecucao { get => horasExecucao; }//GETTERS
         public string NomeLimpeza { get => nomeLimpeza; }
-        public double ValorTotal { get => valorTotal; }
+        public double ValorTotal { get => valorTotal; }//GETTERS
 
-        public Servico(string nomeLimpeza, double horasExecucao)
+        public Servico(string nomeLimpeza, double horasExecucao)//CONSTRUTOR
         {
             this.nomeLimpeza = nomeLimpeza;
             this.horasExecucao = horasExecucao;
         }
 
-        public void cadLimpeza(string nome,double valor)
+        public void cadLimpeza(string nome,double valor)//CADASTRO DE LIMPEZA 1
         {
             this.etapas.Add(nome);
             this.valorEtapas.Add(valor);
         }
 
-        public void cadLimpeza()
+        public void cadLimpeza()//CADASTRO DE LIMPEZA VIA CONSOLE
         {
             bool valid = true;
 
@@ -56,9 +56,10 @@ namespace CleanApp_v2
                     valid = false;
                 }
             }
+            this.calcularPrecoTotal();
         }
 
-        public void calcularPrecoTotal()
+        public void calcularPrecoTotal()//FECHA O PRECO TOTAL DO SERVICO DE ACORDO COM AS ETAPAS CADASTRADAS
         {
             for (int i = 0; i < valorEtapas.Count; i++)
             {
