@@ -38,6 +38,7 @@ namespace CleanApp_v2
             this.label3 = new System.Windows.Forms.Label();
             this.dlValor = new System.Windows.Forms.Label();
             this.Voltar = new System.Windows.Forms.Button();
+            this.distribuirLucros = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -132,12 +133,25 @@ namespace CleanApp_v2
             this.Voltar.UseVisualStyleBackColor = true;
             this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
             // 
+            // distribuirLucros
+            // 
+            this.distribuirLucros.AutoSize = true;
+            this.distribuirLucros.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.distribuirLucros.Location = new System.Drawing.Point(14, 232);
+            this.distribuirLucros.Name = "distribuirLucros";
+            this.distribuirLucros.Size = new System.Drawing.Size(154, 28);
+            this.distribuirLucros.TabIndex = 9;
+            this.distribuirLucros.TabStop = true;
+            this.distribuirLucros.Text = "Distribuir Lucros";
+            this.distribuirLucros.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.distribuirLucros_LinkClicked);
+            // 
             // telaMenuEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(796, 311);
+            this.Controls.Add(this.distribuirLucros);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.dlValor);
             this.Controls.Add(this.label3);
@@ -167,5 +181,6 @@ namespace CleanApp_v2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label dlValor;
         private System.Windows.Forms.Button Voltar;
+        private System.Windows.Forms.LinkLabel distribuirLucros;
     }
 }

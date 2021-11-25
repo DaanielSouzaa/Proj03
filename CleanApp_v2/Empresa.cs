@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CleanApp_v2
 {
-    abstract class Empresa
+    abstract class Empresa : iLimpar
     {
         private string razaoSocial;
         private int cnpj;
@@ -28,14 +28,19 @@ namespace CleanApp_v2
             this.razaoSocial = razao;
             this.cnpj = cnpj;
             this.caixa = caixa;
-            this.repasseFunc = repasseFunc;
+            this.repasseFunc = repasseFunc/100;
+        }
+
+        public void pagar(double valor)
+        {
+            this.caixa += valor;
         }
 
         public Empresa(string razao, int cnpj, double repasseFunc)
         {
             this.razaoSocial = razao;
             this.cnpj = cnpj;
-            this.repasseFunc = repasseFunc;
+            this.repasseFunc = repasseFunc/100;
         }
 
         public double getAvaliacao()
@@ -115,5 +120,7 @@ namespace CleanApp_v2
             }
         }
 
+        public abstract void ExecutarLimpeza();
+        public abstract void DistribuirLucros();
     }
 }

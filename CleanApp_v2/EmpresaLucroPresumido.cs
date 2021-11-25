@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CleanApp_v2
 {
-    class EmpresaLucroPresumido : Empresa, iLimpar
+    class EmpresaLucroPresumido : Empresa
     {
 
         public EmpresaLucroPresumido(string razao, int cnpj, double repasseFunc) : base(razao, cnpj, repasseFunc)
@@ -15,7 +15,7 @@ namespace CleanApp_v2
         {
         }
 
-        public void DistribuirLucros()
+        public override void DistribuirLucros()
         {
             if (caixa > 0)
             {
@@ -29,7 +29,7 @@ namespace CleanApp_v2
                     funcionarios[i].Saldo += repFuncIndiv;
                 }
                 Console.WriteLine("O lucro líquido da empresa no período foi de: {0}", caixa);
-
+                this.caixa = caixa - (repFuncIndiv * funcionarios.Count);
             }
             else
             {
@@ -38,7 +38,7 @@ namespace CleanApp_v2
 
         }
 
-        public void ExecutarLimpeza()
+        public override void ExecutarLimpeza()
         {
             if (servicos.Count > 0)
             {

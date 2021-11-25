@@ -34,7 +34,7 @@ namespace CleanApp_v2
             this.rad2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnTeste = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rad1
@@ -63,18 +63,19 @@ namespace CleanApp_v2
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // linkLabel1
+            // btnTeste
             // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
+            resources.ApplyResources(this.btnTeste, "btnTeste");
+            this.btnTeste.Name = "btnTeste";
+            this.btnTeste.UseVisualStyleBackColor = true;
+            this.btnTeste.Click += new System.EventHandler(this.btnTeste_Click);
             // 
             // Tipo
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.btnTeste);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.rad2);
@@ -93,6 +94,6 @@ namespace CleanApp_v2
         private System.Windows.Forms.RadioButton rad2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btnTeste;
     }
 }

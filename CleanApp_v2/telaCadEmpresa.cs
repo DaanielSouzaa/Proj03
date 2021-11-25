@@ -150,6 +150,7 @@ namespace CleanApp_v2
 
         private void atualizaBoxServicos()
         {
+            BoxlistServicos.Items.Clear();
             foreach (Servico s in Program.servicos)
             {
                 BoxlistServicos.Items.Add(s.NomeLimpeza);
@@ -158,6 +159,7 @@ namespace CleanApp_v2
 
         private void atualizaBoxFuncionarios()
         {
+            BoxlistFunc.Items.Clear();
             foreach(Pessoa p in Program.pessoas)
             {
                 BoxlistFunc.Items.Add(p.Nome);

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CleanApp_v2
 {
-    class EmpresaLucroReal : Empresa, iLimpar
+    class EmpresaLucroReal : Empresa
     {
         public EmpresaLucroReal(string razao, int cnpj, double repasseFunc) : base(razao, cnpj, repasseFunc)
         {
@@ -34,7 +34,7 @@ namespace CleanApp_v2
             }
         }
 
-        public void DistribuirLucros()
+        public override void DistribuirLucros()
         {
             if (caixa > 0)
             {
@@ -60,7 +60,7 @@ namespace CleanApp_v2
 
         }
 
-        public void ExecutarLimpeza()
+        public override void ExecutarLimpeza()
         {
             if (servicos.Count > 0)
             {
